@@ -56,9 +56,37 @@ aluno que procure outro curso para se matricular.
   - TDD - Desenvolvimento Orientado a Testes
   - Sementes de banco, para iniciar o sistema com alguns cursos, professores e
     salas previamente cadastrados
+  - Internacionalização
+
 
 ### O que não vamos usar nesta demonstração
 
   - Edição de CSS
   - Autenticação de usuário
+
+
+### Primeiros Passos
+
+Nosso primeiro passo é criar a aplicação. Acesse o diretório `rails` deste
+repositório:
+
+```
+cd rails
+```
+
+E utilize o comando `rails` para criar uma nova aplicação:
+
+```
+rails new escola
+```
+
+Acesse o diretório recém criado para a aplicação:
+
+```
+cd escola
+```
+
+
+E continuamos o acesso a partir do arquivo `README.md` daquele diretório.
+
 
