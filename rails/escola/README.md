@@ -25,6 +25,9 @@ Que atributos são necessários para que esta sala seja ulitizada?
     rails db:migrate # ou rake db:migrate
     ```
 
+O comando `rails db:migrate` (ou `rake db:migrate`) serve para migrar a base de
+dados, criando e/ou atualizando as tabelas que a compõe.
+
 ### Testes para as Salas
 
 Sabemos que uma sala não pode ser referenciada se não houver um número que a
@@ -33,15 +36,66 @@ identifique, logo, temos que o número da sala é um parâmetro obrigatório.
 ```
 # test/models/classroom_test.rb
 
-class ClassromTest < ActiveSupport::TestCase
+class ClassroomTest < ActiveSupport::TestCase
   test "should not be valid without a number" do
-    room = Classroom.new(number:nil)
+    room = Classroom.new
+    assert_nil room.number
     refute room.valid?
+    room.number = 100
+    assert room.valid?
   end
-end
 ```
 
 Executando este teste, observamos que o requisito não é atendido:
 
 ```
-rails test
+$ rails test
+<...>
+F
+
+Failure:
+ClassroomTest#test_should_not_be_valid_without_a_number
+[/Users/aramisf/git/ncr/rails/escola/test/models/classroom_test.rb:7]:
+Expected true to not be truthy.
+
+
+bin/rails test test/models/classroom_test.rb:4
+
+<...>
+```
+
+Para resolver o problema precisamos adicionar uma validação de atributos. Abra o
+arquivo `app/models/classroom.rb`, e adicione uma validação, exigindo a presença
+do atributo em questão:
+
+
+```
+class Classroom < ApplicationRecord
+  validates_presence_of :number
+end
+```
+
+Execute novamente os testes e verifique o resultado:
+
+```
+# Running:
+
+........
+
+Finished in 0.372282s, 21.4891 runs/s, 29.5475 assertions/s.
+8 runs, 11 assertions, 0 failures, 0 errors, 0 skips
+```
+
+Todos os testes foram aprovados.
+
+
+## Exercício 1
+
+Para sabermos a quantidade de vagas que serão abertas para cada um dos cursos,
+precisamos saber qual é a capacidade da sala onde cada curso será ministrado.
+Escreva um teste garantindo que uma sala só é válida se possuir uma capacidade a
+ela atribuída. Cuidado, pois agora uma sala precisa que ambos os atributos
+`number` e `capacity` estejam presentes.
+
+`DICA`: Utilize `fixtures` para reduzir o tamanho dos seus testes.
+

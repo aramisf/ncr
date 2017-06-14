@@ -1,9 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# big
 one:
-  number: 1
-  capacity: 1
+  number: 100
+  capacity: 100
 
+# small
 two:
-  number: 1
-  capacity: 1
+  number: 10
+  capacity: 10
+
+number_nil:
+  number:
+  capacity: 10
+
+capacity_nil:
+  number: 10
+  capacity:
