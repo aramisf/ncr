@@ -43,11 +43,12 @@ class ClassroomTest < ActiveSupport::TestCase
     room.number = 100
     assert room.valid?
   end
+end
 ```
 
 Executando este teste, observamos que o requisito não é atendido:
 
-```bash
+```
 $ rails test
 <...>
 F
@@ -76,7 +77,7 @@ end
 
 Execute novamente os testes e verifique o resultado:
 
-```bash
+```
 <...>
 # Running:
 

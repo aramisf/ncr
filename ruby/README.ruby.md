@@ -23,8 +23,7 @@ sudo yum install ruby
  - https://learnxinyminutes.com/docs/ruby/
  - https://www.ruby-lang.org/en/documentation/quickstart/
 
-Veja também o [material apresentado durante o
-curso](https://github.com/aramisf/ncr/tree/master/ruby)
+Veja também o [material apresentado durante o curso][1]
 
 ## Cursos:
  - http://tryruby.org/
@@ -36,3 +35,5 @@ curso](https://github.com/aramisf/ncr/tree/master/ruby)
  - https://www.ruby-lang.org/en/documentation/
  - http://ruby-doc.org
 
+
+[1]: https://github.com/aramisf/ncr/tree/master/ruby
