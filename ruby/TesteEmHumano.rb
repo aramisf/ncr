@@ -21,12 +21,12 @@ class TesteEmHumano < Test::Unit::TestCase
     assert_raise(NotImplementedError){ Humano.new.sexo }
   end
 
-  test "homem tem genero masculino" do
+  test "homem tem sexo masculino" do
     homem = Home.new
     assert_equal "Masculino", homem.sexo
   end
 
-  test "mulher tem genero feminino" do
+  test "mulher tem sexo feminino" do
     mulher = Mulher.new
     assert_equal "Feminino", mulher.sexo
   end

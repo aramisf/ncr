@@ -3,19 +3,21 @@
 ## Instalação:
   - https://www.ruby-lang.org/en/documentation/installation/
 
-    # Windows:
-    # Baixe e instale um dos executáveis nesta página:
-    # https://rubyinstaller.org/downloads/
+```
+# Windows:
+# Baixe e instale um dos executáveis nesta página:
+# https://rubyinstaller.org/downloads/
 
-    # MacOS (com o brew):
-    brew install ruby
+# MacOS (com o brew):
+brew install ruby
 
-    # Linuxes:
-    ## Debian-like:
-    sudo apt-get install ruby-full
+# Linuxes:
+## Debian-like:
+sudo apt-get install ruby-full
 
-    ## Fedora-like:
-    sudo yum install ruby
+## Fedora-like:
+sudo yum install ruby
+```
 
 ## O Básico
  - https://learnxinyminutes.com/docs/ruby/
