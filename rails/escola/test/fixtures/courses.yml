@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  classroom_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  classroom_id: 2
+
+empty:
+  name: MyString
+  description: MyText
+  classroom_id: 3
+
+nameless:
+  name:
+  description: Description Here
+  classroom_id: 2
+
+descriptionless:
+  name: Name
+  description:
+  classroom_id: 2
+
+classroomless:
+  name: Name Here
+  description: Description Here
+  classroom_id:

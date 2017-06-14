@@ -2,18 +2,27 @@
 
 # big
 one:
+  id: 1
   number: 100
   capacity: 100
 
 # small
 two:
+  id: 2
   number: 10
   capacity: 10
 
+empty:
+  id: 3
+  number: 11
+  capacity: 0
+
 number_nil:
+  #id: 1 # this one is not valid, so why to put an id?
   number:
   capacity: 10
 
 capacity_nil:
+  #id: 1 # this one is not valid, so why to put an id?
   number: 10
   capacity:
