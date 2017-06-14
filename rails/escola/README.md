@@ -19,11 +19,9 @@ Que atributos são necessários para que esta sala seja ulitizada?
   - Também é necessário saber quantos alunos a sala comporta, então precisamos
     adicionar também a capacidade.
 
-    ```
     rails generate scaffold Classroom number:integer capacity:integer
     <...>
     rails db:migrate # ou rake db:migrate
-    ```
 
 O comando `rails db:migrate` (ou `rake db:migrate`) serve para migrar a base de
 dados, criando e/ou atualizando as tabelas que a compõe.
@@ -33,58 +31,54 @@ dados, criando e/ou atualizando as tabelas que a compõe.
 Sabemos que uma sala não pode ser referenciada se não houver um número que a
 identifique, logo, temos que o número da sala é um parâmetro obrigatório.
 
-```
 # test/models/classroom_test.rb
 
-class ClassroomTest < ActiveSupport::TestCase
-  test "should not be valid without a number" do
-    room = Classroom.new
-    assert_nil room.number
-    refute room.valid?
-    room.number = 100
-    assert room.valid?
-  end
-```
+    class ClassroomTest < ActiveSupport::TestCase
+      test "should not be valid without a number" do
+        room = Classroom.new
+        assert_nil room.number
+        refute room.valid?
+        room.number = 100
+        assert room.valid?
+      end
 
 Executando este teste, observamos que o requisito não é atendido:
 
-```
-$ rails test
-<...>
-F
+    $ rails test
+    <...>
+    F
 
-Failure:
-ClassroomTest#test_should_not_be_valid_without_a_number
-[/Users/aramisf/git/ncr/rails/escola/test/models/classroom_test.rb:7]:
-Expected true to not be truthy.
+    Failure:
+    ClassroomTest#test_should_not_be_valid_without_a_number
+    [/Users/aramisf/git/ncr/rails/escola/test/models/classroom_test.rb:7]:
+    Expected true to not be truthy.
 
 
-bin/rails test test/models/classroom_test.rb:4
+    bin/rails test test/models/classroom_test.rb:4
 
-<...>
-```
+    <...>
+
 
 Para resolver o problema precisamos adicionar uma validação de atributos. Abra o
 arquivo `app/models/classroom.rb`, e adicione uma validação, exigindo a presença
 do atributo em questão:
 
 
-```
-class Classroom < ApplicationRecord
-  validates_presence_of :number
-end
-```
+    class Classroom < ApplicationRecord
+      validates_presence_of :number
+    end
+
 
 Execute novamente os testes e verifique o resultado:
 
-```
-# Running:
 
-........
+    # Running:
 
-Finished in 0.372282s, 21.4891 runs/s, 29.5475 assertions/s.
-8 runs, 11 assertions, 0 failures, 0 errors, 0 skips
-```
+    ........
+
+    Finished in 0.372282s, 21.4891 runs/s, 29.5475 assertions/s.
+    8 runs, 11 assertions, 0 failures, 0 errors, 0 skips
+
 
 Todos os testes foram aprovados.
 

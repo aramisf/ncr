@@ -6,9 +6,7 @@
 Assumindo que você tem o Ruby instalado no seu sistema, basta executar este
 comando:
 
-```
-gem install rails
-```
+    gem install rails
 
 Se você não tem, por favor veja [estas
 instruções](https://github.com/aramisf/ncr/blob/master/README.ruby.md)
@@ -73,21 +71,15 @@ aluno que procure outro curso para se matricular.
 Nosso primeiro passo é criar a aplicação. Acesse o diretório `rails` deste
 repositório:
 
-```
-cd rails
-```
+    cd rails
 
 E utilize o comando `rails` para criar uma nova aplicação:
 
-```
-rails new escola
-```
+    rails new escola
 
 Acesse o diretório recém criado para a aplicação:
 
-```
-cd escola
-```
+    cd escola
 
 
 E continuamos o acesso a partir do arquivo
