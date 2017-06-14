@@ -1,5 +1,7 @@
 require 'test/unit' # Biblioteca padrao de testes, nao eh necessario instalar `a parte
 require './humano'
+require './homem'
+require './mulher'
 
 class TesteEmHumano < Test::Unit::TestCase
   test "humano deve saber seu nome" do
@@ -17,6 +19,16 @@ class TesteEmHumano < Test::Unit::TestCase
 
   test "humano sem genero deve gerar excecao quando se pergunta seu sexo" do
     assert_raise(NotImplementedError){ Humano.new.sexo }
+  end
+
+  test "homem tem genero masculino" do
+    homem = Home.new
+    assert_equal "Masculino", homem.sexo
+  end
+
+  test "mulher tem genero feminino" do
+    mulher = Mulher.new
+    assert_equal "Feminino", mulher.sexo
   end
 
   test "humano tem q saber quando nasceu" do

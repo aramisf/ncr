@@ -1,6 +1,9 @@
+# Precisamos importar o arquivo com a superclasse para que ela possa ser
+# utilizada
 require('./humano')
 
-class Home < Humano # Sim, sem o `m` ao final, mostrando que nao ha resticao entre nome de classe e de arquivo
+class Home < Humano # Sim, sem o `m` ao final, mostrando que nao ha resticao
+                    # entre nome de classe e de arquivo
 
   def falar
     "Bla"
@@ -33,5 +36,4 @@ class Home < Humano # Sim, sem o `m` ao final, mostrando que nao ha resticao ent
       instance_variable_set("@#{v}", valor)
     end
   end
-
 end
