@@ -99,3 +99,44 @@ ela atribuída. Cuidado, pois agora uma sala precisa que ambos os atributos
 
 `DICA`: Utilize `fixtures` para reduzir o tamanho dos seus testes.
 
+
+### Criando Sementes de banco
+
+As sementes de banco nos servirão como fonte inicial de dados, permitindo que
+tenhamos uma visibilidade dos dados assim que o sistema tiver sido montado.
+
+Crie um novo arquivo chamado `db/seeds/classrooms.rb`:
+
+    mkdir db/seeds
+    vim db/seeds/classrooms.rb  # use o editor de texto que preferir
+
+
+Segue um exemplo de como seu arquivo de sementes ficará. Fique à vontade para
+adicionar quantas salas quiser:
+
+    # db/seeds/classrooms.rb
+    Classroom.create([
+      {
+        number: 1
+        capacity: 50
+      },
+      {
+        number: 2
+        capacity: 80
+      },
+    ])
+
+Depois, basta adicionar o arquivo recém criado à lista de arquivos a serem
+executados durante a semeadura:
+
+    # db/seeds.rb
+    require File.expand_path('../seeds/classrooms', __FILE__)
+
+
+Verifique que a semeadura surtiu o efeito desejado:
+
+    rails s
+    # Abra seu navegador em `http://0.0.0.0:3000/classrooms`
+
+
+

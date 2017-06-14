@@ -91,7 +91,7 @@ cd escola
 
 
 E continuamos o acesso a partir do arquivo
-[README.md](https://github.com/aramisf/ncr/blob/master/rails/escola/README.md) daquele
-diretório.
+[README.md](https://github.com/aramisf/ncr/blob/master/rails/escola/README.md)
+deste diretório.
 
 
