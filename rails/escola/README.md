@@ -31,8 +31,7 @@ dados, criando e/ou atualizando as tabelas que a compõe.
 Sabemos que uma sala não pode ser referenciada se não houver um número que a
 identifique, logo, temos que o número da sala é um parâmetro obrigatório.
 
-# test/models/classroom_test.rb
-
+    # test/models/classroom_test.rb
     class ClassroomTest < ActiveSupport::TestCase
       test "should not be valid without a number" do
         room = Classroom.new
@@ -53,9 +52,7 @@ Executando este teste, observamos que o requisito não é atendido:
     [/Users/aramisf/git/ncr/rails/escola/test/models/classroom_test.rb:7]:
     Expected true to not be truthy.
 
-
     bin/rails test test/models/classroom_test.rb:4
-
     <...>
 
 
@@ -72,6 +69,7 @@ do atributo em questão:
 Execute novamente os testes e verifique o resultado:
 
 
+    <...>
     # Running:
 
     ........
@@ -80,7 +78,7 @@ Execute novamente os testes e verifique o resultado:
     8 runs, 11 assertions, 0 failures, 0 errors, 0 skips
 
 
-Todos os testes foram aprovados.
+Todos os testes foram aprovados :sunglasses:
 
 
 ## Exercício 1
@@ -101,8 +99,8 @@ tenhamos uma visibilidade dos dados assim que o sistema tiver sido montado.
 
 Crie um novo arquivo chamado `db/seeds/classrooms.rb`:
 
-    mkdir db/seeds
-    vim db/seeds/classrooms.rb  # use o editor de texto que preferir
+    $ mkdir db/seeds
+    $ vim db/seeds/classrooms.rb  # use o editor de texto que preferir
 
 
 Segue um exemplo de como seu arquivo de sementes ficará. Fique à vontade para
@@ -129,7 +127,7 @@ executados durante a semeadura:
 
 Verifique que a semeadura surtiu o efeito desejado:
 
-    rails s
+    $ rails s
     # Abra seu navegador em `http://0.0.0.0:3000/classrooms`
 
 

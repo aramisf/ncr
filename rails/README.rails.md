@@ -9,7 +9,7 @@ comando:
     gem install rails
 
 Se você não tem, por favor veja [estas
-instruções](https://github.com/aramisf/ncr/blob/master/README.ruby.md)
+instruções](https://github.com/aramisf/ncr/blob/master/ruby/README.ruby.md)
 
 
 ## O Básico
