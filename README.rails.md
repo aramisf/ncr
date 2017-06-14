@@ -3,12 +3,15 @@
 
 ## Instalação
 
-  - Assumindo que você tem o Ruby instalado no seu sistema, basta executar este
-    comando:
+Assumindo que você tem o Ruby instalado no seu sistema, basta executar este
+comando:
 
-    ```
-    gem install rails
-    ```
+```
+gem install rails
+```
+
+Se você não tem, por favor veja [estas
+instruções](https://github.com/aramisf/ncr/blob/master/README.ruby.md)
 
 
 ## O Básico
